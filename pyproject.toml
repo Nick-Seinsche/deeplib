@@ -1,0 +1,42 @@
+[project]
+name = "deeplib"
+version = "1.0.0"
+authors = [{name = "Nick Seinsche", email = "nick.seinsche@gmail.com"}]
+description = "A URL Shortener Service"
+license = {file = "LICENSE.txt"}
+readme = "README.md"
+keywords = ["url", "shortener", "service"]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "idx2numpy",
+    "matplotlib"
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "pytest",
+    "flake8",
+    "flake8-docstrings"
+]
+docs = ["sphinx", "sphinx-rtd-theme"]
+
+[tool.setuptools.packages.find]
+where = ['.']
+include = ['deeplib']
+exclude = ['venv', 'tests']
+
+[build-system]
+requires = [
+    "setuptools >= 40.9.0"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+extend_exclude = '/(\.venv.*)/'
+line-length = 88
+
+# pyproject.toml
+[tool.pytest.ini_options]
+pythonpath = [".", "deeplib"]
