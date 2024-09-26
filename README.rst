@@ -30,7 +30,7 @@ Installation
 
    .. code-block:: bash
 
-      git clone https://github.com/your-username/repo-name.git
+      git clone https://github.com/Nick-Seinsche/deeplib.git
       cd repo-name
 
 2. Install dependencies:
