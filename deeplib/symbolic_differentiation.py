@@ -1,10 +1,11 @@
-from __future__ import annotations
+"""
+Module implementing a symbolic mathematical expression framework.
 
+With support for basic arithmetic operations, evaluation,
+differentiation, Jacobians, and Hessians.
 """
-Module implementing a symbolic mathematical expression framework with support
-for basic arithmetic operations, evaluation, differentiation, Jacobians, and
-Hessians.
-"""
+
+from __future__ import annotations
 
 # Standard
 from typing import Any, Self, Literal
