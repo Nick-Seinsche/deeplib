@@ -88,21 +88,30 @@ The `symbolic_differentiation.py` module provides symbolic operations and differ
 
 .. code-block:: python
 
-   from symbolic_differentiation import SimpleVariable, Add, Sin
+   from deeplib.from_scratch.symbolic_differentiation import *
 
-   # Define variables
    x1 = SimpleVariable("x1", (1,))
    x2 = SimpleVariable("x2", (1,))
+   variables = [x1, x2]
+   term = (
+      Sqrt(x1 * x1 + x2 * x2 + x3 * x3 + x4 * x4)
+      + Exp(x1 + x2 + x3 - x4 * x4)
+      + Cos(x1)
+      + x2
+      + Norm(MatrixVariable("v", (3,), np.array([x1, x2, x3])), 2)
+   )
 
-   # Define an expression
-   expression = Add(x1, Sin(x2))
+   jterm = term.jacobian(variables)
+   hterm = term.hessian(variables)
 
-   # Differentiate with respect to x1 and x2
-   dx1 = expression._derivative(x1)
-   dx2 = expression._derivative(x2)
+   f = SimpleFunction("f", variables, term)
+   jf = SimpleFunction("jf", variables, jterm)
+   hf = SimpleFunction("hf", variables, hterm)
 
-   print(f"d(expression)/dx1: {dx1}")
-   print(f"d(expression)/dx2: {dx2}")
+   # evaluate the function
+   print(f([1, 2, 3, 4]))
+   print(jf([1, 2, 3, 4]))
+   print(hf([1, 2, 3, 4]))
 
 License
 -------

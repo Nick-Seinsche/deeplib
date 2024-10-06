@@ -10,7 +10,8 @@ requires-python = ">=3.11"
 dependencies = [
     "numpy",
     "idx2numpy",
-    "matplotlib"
+    "matplotlib",
+    "casadi"
 ]
 
 [project.optional-dependencies]

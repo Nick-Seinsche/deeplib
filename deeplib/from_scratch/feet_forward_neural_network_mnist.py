@@ -357,7 +357,7 @@ def display_image(images, labels, index):
 
 
 if __name__ == "__main__":
-    path = Path("data/MNIST")
+    path = Path("../data/MNIST")
 
     # Load testing images
     test_images_file = "t10k-images.idx3-ubyte"

@@ -2,7 +2,7 @@
 
 import pytest
 import numpy as np
-from deeplib.symbolic_differentiation import (
+from deeplib.from_scratch.symbolic_differentiation import (
     SimpleVariable,
     Add,
     Subtract,

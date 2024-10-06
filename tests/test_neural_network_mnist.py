@@ -3,7 +3,7 @@
 import numpy as np
 
 # Import the classes from your module
-from deeplib.neural_network_mnist import (
+from deeplib.from_scratch.feet_forward_neural_network_mnist import (
     NeuralNetwork,
     Layer,
     LayerRELU,
