@@ -1,3 +1,5 @@
+"""Conftest."""
+
 import pytest
 import numpy as np
 from pathlib import Path
@@ -6,6 +8,7 @@ import idx2numpy
 
 @pytest.fixture
 def exam_dataset_train():
+    """Small exam sample training dataset."""
     # Features:
     # - hours studied
     # - score at the last exam out of 100
@@ -46,6 +49,7 @@ def exam_dataset_train():
 
 @pytest.fixture
 def mnist_dataset_train():
+    """Mnist Number training dataset."""
     path = Path("data/MNIST")
     train_images_file = "train-images.idx3-ubyte"
     train_labels_file = "train-labels.idx1-ubyte"
@@ -59,6 +63,7 @@ def mnist_dataset_train():
 
 @pytest.fixture
 def mnist_dataset_test():
+    """Mnist Number test dataset."""
     path = Path("data/MNIST")
     test_images_file = "t10k-images.idx3-ubyte"
     test_labels_file = "t10k-labels.idx1-ubyte"

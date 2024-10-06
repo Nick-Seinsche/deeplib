@@ -1,36 +1,50 @@
+"""Module implementing basic machine learning models from scratch."""
+
 import numpy as np
 import pickle as pkl
 
 
 class Model:
+    """Base class for machine learning models with save and load functionality."""
+
     def save_model(self, path):
+        """Save the model to a file at the given path."""
         with open(path, "wb") as f:
             pkl.dump(self, f)
 
     @staticmethod
     def load_model(path):
+        """Load a model from a file at the given path."""
         with open(path, "rb") as f:
             return pkl.load(f)
 
 
 class LinearRegression(Model):
+    """Linear regression model using the normal equation."""
+
     def __init__(self):
+        """Initialize the LinearRegression model."""
         self.w = None
         self.X = None
         self.y = None
 
     def fit(self, X, y):
+        """Fit the model to the data X and target y."""
         self.X = X
         self.y = y
         # solve the Gaussian normal equation for ||Xw - y||^2
         self.w = np.linalg.inv(X.T @ X) @ X.T @ y
 
     def predict(self, X):
+        """Predict the target values for input data X."""
         return X @ self.w
 
 
 class LogisticRegression(Model):
+    """Logistic regression model supporting binary and multinomial classification."""
+
     def __init__(self, alpha=0):
+        """Initialize the LogisticRegression model with regularization parameter."""
         self.w = None
         self.X = None
         self.y = None
@@ -78,6 +92,7 @@ class LogisticRegression(Model):
             return gradient
 
     def fit(self, X, y):
+        """Fit the logistic regression model to the data X and target y."""
         self.X = X
         self.y = y
         self.aX = np.hstack((np.ones((X.shape[0], 1)), X))
@@ -125,6 +140,7 @@ class LogisticRegression(Model):
         return loss
 
     def predict(self, X):
+        """Predict class labels for samples in X."""
         aX = np.hstack((np.ones((X.shape[0], 1)), X))
         z = aX @ self.w
         if self.mode == "binary":
@@ -133,10 +149,3 @@ class LogisticRegression(Model):
         elif self.mode == "multinomial":
             s = self._softmax(z)
             return np.argmax(s, axis=1)
-
-
-if __name__ == "__main__":
-    from pathlib import Path
-    import idx2numpy
-
-    pass
