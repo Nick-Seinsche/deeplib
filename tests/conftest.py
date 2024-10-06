@@ -53,11 +53,13 @@ def mnist_dataset_train():
     path = Path("data/MNIST")
     train_images_file = "train-images.idx3-ubyte"
     train_labels_file = "train-labels.idx1-ubyte"
-
-    train_images = idx2numpy.convert_from_file(str(path / train_images_file)).reshape(
-        -1, 28 * 28
-    )
-    train_labels = idx2numpy.convert_from_file(str(path / train_labels_file))
+    try:
+        train_images = idx2numpy.convert_from_file(
+            str(path / train_images_file)
+        ).reshape(-1, 28 * 28)
+        train_labels = idx2numpy.convert_from_file(str(path / train_labels_file))
+    except FileNotFoundError:
+        return None
     return (train_images, train_labels)
 
 
@@ -67,9 +69,11 @@ def mnist_dataset_test():
     path = Path("data/MNIST")
     test_images_file = "t10k-images.idx3-ubyte"
     test_labels_file = "t10k-labels.idx1-ubyte"
-
-    test_images = idx2numpy.convert_from_file(str(path / test_images_file)).reshape(
-        -1, 28 * 28
-    )
-    test_labels = idx2numpy.convert_from_file(str(path / test_labels_file))
+    try:
+        test_images = idx2numpy.convert_from_file(str(path / test_images_file)).reshape(
+            -1, 28 * 28
+        )
+        test_labels = idx2numpy.convert_from_file(str(path / test_labels_file))
+    except FileNotFoundError:
+        return None
     return (test_images, test_labels)

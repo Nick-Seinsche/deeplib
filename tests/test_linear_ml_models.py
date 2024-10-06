@@ -1,5 +1,7 @@
 """Test the linear machine learning models."""
 
+import pytest
+
 import numpy as np
 
 import deeplib.from_scratch.linear_ml_models as models
@@ -18,6 +20,9 @@ def test_binary_logistic_regression_on_mnist_dataset(
     mnist_dataset_train, mnist_dataset_test
 ):
     """Test logistic regression on 0 recognition of mnist data."""
+    if not mnist_dataset_train or not mnist_dataset_test:
+        pytest.skip("MNIST dataset not available.")
+
     M = models.LogisticRegression()
     Xtrain, ytrain = mnist_dataset_train
     Xtrain = Xtrain[:1000]
@@ -36,6 +41,9 @@ def test_multinomial_logistic_regression_on_mnist_dataset(
     mnist_dataset_train, mnist_dataset_test
 ):
     """Test multinomial logistc regression on mnist dataset."""
+    if not mnist_dataset_train or not mnist_dataset_test:
+        pytest.skip("MNIST dataset not available.")
+
     M = models.LogisticRegression()
     Xtrain, ytrain = mnist_dataset_train
     Xtrain = Xtrain[:1000]
