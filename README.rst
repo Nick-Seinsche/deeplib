@@ -1,7 +1,7 @@
-Neural Network and Symbolic Differentiation
+Neural Networks, Symbolic Differentiation and ML Studies
 ===========================================
 
-This repository contains implementations of a neural network for the MNIST dataset and a symbolic differentiation module. The neural network model supports training, saving, and loading of models. The symbolic differentiation module supports operations such as addition, subtraction, multiplication, division, and more, providing a framework for evaluating and differentiating symbolic mathematical expressions.
+This repository contains implementations of a neural network for the MNIST dataset, a symbolic differentiation module as well as ml studies of mine. The neural network model supports training, saving, and loading of models. The symbolic differentiation module supports operations such as addition, subtraction, multiplication, division, and more, providing a framework for evaluating and differentiating symbolic mathematical expressions.
 
 Features
 --------
@@ -15,6 +15,9 @@ Features
   - Allows symbolic manipulation of variables.
   - Includes operations like `Add`, `Subtract`, `Multiply`, `Divide`, and trigonometric functions like `Sin` and `Cos`.
   - Supports evaluation and differentiation of expressions.
+
+- **ML Studies**
+   - RFM Analysis on Online Retail Customer Dataset
 
 Installation
 ------------
