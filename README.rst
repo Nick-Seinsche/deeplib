@@ -7,16 +7,16 @@ Features
 --------
 
 - **Neural Network for MNIST**:
-  - Implemented with support for various layers like `ReLU` and `Softmax`.
-  - Supports backpropagation and gradient descent for training.
-  - Can save and load models for reuse.
+   - Implemented with support for various layers like `ReLU` and `Softmax`.
+   - Supports backpropagation and gradient descent for training.
+   - Can save and load models for reuse.
 
 - **Symbolic Differentiation**:
-  - Allows symbolic manipulation of variables.
-  - Includes operations like `Add`, `Subtract`, `Multiply`, `Divide`, and trigonometric functions like `Sin` and `Cos`.
-  - Supports evaluation and differentiation of expressions.
+   - Allows symbolic manipulation of variables.
+   - Includes operations like `Add`, `Subtract`, `Multiply`, `Divide`, and trigonometric functions like `Sin` and `Cos`.
+   - Supports evaluation and differentiation of expressions.
 
-- **ML Studies**
+- **ML Studies**:
    - RFM Analysis on Online Retail Customer Dataset
 
 Installation
