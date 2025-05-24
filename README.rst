@@ -3,7 +3,16 @@ Neural Networks, Symbolic Differentiation and ML Studies
 
 This repository contains implementations of a neural network for the MNIST dataset, a symbolic differentiation module as well as ml studies of mine. The neural network model supports training, saving, and loading of models. The symbolic differentiation module supports operations such as addition, subtraction, multiplication, division, and more, providing a framework for evaluating and differentiating symbolic mathematical expressions.
 
-Skills/learnings: Feedforward Neural Networks, KMeans Clustering, Linear/Logistic Regression, Classification, Word Embeddings, Language Models, Sentiment Analysis, Github Workflows, Python DevOps
+**Skills/learnings:** 
+- Feedforward Neural Networks
+- KMeans Clustering
+- Linear/Logistic Regression
+- Classification
+- Word Embeddings
+- Language Models
+- Sentiment Analysis
+- Github Workflows 
+- Python DevOps
 
 Features
 --------
@@ -19,7 +28,9 @@ Features
    - Supports evaluation and differentiation of expressions.
 
 - **ML Studies**:
-   - RFM Analysis on Online Retail Customer Dataset
+   - RFM Analysis on Online Retail Customer Dataset and Business Insights
+   - Penguin Species Classification using Logistic Regression, Naive Bayes and a Neural Network.
+   - Natural Language Processing
 
 Installation
 ------------
