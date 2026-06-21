@@ -1,4 +1,10 @@
 numpy
+pandas
 idx2numpy
 matplotlib
+plotly
+seaborn
+openpyxl
+scikit-learn
 casadi
+tensorflow[and-cuda]

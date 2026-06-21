@@ -2,16 +2,27 @@
 name = "deeplib"
 version = "1.0.0"
 authors = [{name = "Nick Seinsche", email = "nick.seinsche@gmail.com"}]
-description = "A URL Shortener Service"
+description = "A place for my deep learning studies and experiments."
 license = {file = "LICENSE.txt"}
 readme = "README.md"
-keywords = ["url", "shortener", "service"]
-requires-python = ">=3.11"
+keywords = ["machine", "learning", "deep", "learning", "neural", "networks", "artificial", "intelligence"]
+requires-python = ">=3.10"
 dependencies = [
     "numpy",
+    "pandas",
     "idx2numpy",
     "matplotlib",
-    "casadi"
+    "seaborn",
+    "openpyxl",
+    "plotly",
+    "gensim",
+    "kaggle",
+    "nltk",
+    "tqdm",
+    "spacy",
+    "scikit-learn",
+    "casadi",
+    "tensorflow[and-cuda]"
 ]
 
 [project.optional-dependencies]
