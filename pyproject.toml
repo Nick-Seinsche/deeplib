@@ -6,7 +6,7 @@ description = "A place for my deep learning studies and experiments."
 license = {file = "LICENSE.txt"}
 readme = "README.md"
 keywords = ["machine", "learning", "deep", "learning", "neural", "networks", "artificial", "intelligence"]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "numpy",
     "pandas",
@@ -15,17 +15,20 @@ dependencies = [
     "seaborn",
     "openpyxl",
     "plotly",
-    "gensim",
     "kaggle",
-    "nltk",
     "tqdm",
-    "spacy",
     "scikit-learn",
     "casadi",
-    "tensorflow[and-cuda]"
+    "typing-extensions>=4.15.0",
 ]
 
 [project.optional-dependencies]
+full = [
+    "gensim",
+    "spacy",
+    "nltk",
+    "tensorflow[and-cuda]"
+]
 dev = [
     "build",
     "pytest",
